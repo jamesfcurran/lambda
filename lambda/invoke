@@ -1,0 +1,29 @@
+/bin/rm foo.txt
+
+aws --profile hvca_user lambda invoke \
+  --invocation-type RequestResponse \
+  --function-name HVCA_phone_lookup \
+  --region us-west-2 \
+  --payload "6145654712" \
+  --profile  hvca_user \
+  --log-type Tail  foo.txt
+
+
+
+# aws --profile hvca_user lambda invoke \
+#  --invocation-type RequestResponse \
+#  --function-name HVCA_account_lookup \
+#  --region us-west-2 \
+#  --payload "6145654712" \
+#  --profile  hvca_user \
+#  --log-type Tail  foo.txt
+
+
+
+# aws --profile hvca_user lambda invoke \
+#   --invocation-type RequestResponse \
+#   --function-name HVCA_get_ERT \
+#   --region us-west-2 \
+#   --payload "6145654712" \
+#   --profile  hvca_user \
+#   --log-type Tail  foo.txt

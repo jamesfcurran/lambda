@@ -1,0 +1,39 @@
+aws  --profile hvca_user s3 cp hvca/target/lambda-java-example-1.0-SNAPSHOT.jar s3://hvcafunctions
+
+aws --profile hvca_user lambda delete-function --region us-west-2 --function-name HVCA_phone_lookup
+aws --profile hvca_user lambda delete-function --region us-west-2 --function-name HVCA_account_lookup
+aws --profile hvca_user lambda delete-function --region us-west-2 --function-name HVCA_get_ERT
+
+# Phone Lookup
+aws --profile hvca_user lambda create-function \
+    --function-name HVCA_phone_lookup \
+    --runtime java8 \
+    --role arn:aws:iam::017755420856:role/hvca_lambda \
+    --handler HVCA.HVCAHandlers::phone_lookup \
+    --region us-west-2 \
+    --profile hvca_user \
+    --description "Created by Jim" \
+    --code S3Bucket=hvcafunctions,S3Key=lambda-java-example-1.0-SNAPSHOT.jar
+    
+# Account Lookup
+aws --profile hvca_user lambda create-function \
+    --function-name HVCA_account_lookup \
+    --runtime java8 \
+    --role arn:aws:iam::017755420856:role/hvca_lambda \
+    --handler HVCA.HVCAHandlers::account_lookup \
+    --region us-west-2 \
+    --profile hvca_user \
+    --description "Created by Jim" \
+    --code S3Bucket=hvcafunctions,S3Key=lambda-java-example-1.0-SNAPSHOT.jar
+
+# ERT Lookup
+aws --profile hvca_user lambda create-function \
+    --function-name HVCA_get_ERT \
+    --runtime java8 \
+    --role arn:aws:iam::017755420856:role/hvca_lambda \
+    --handler HVCA.HVCAHandlers::get_ERT \
+    --region us-west-2 \
+    --profile hvca_user \
+    --description "Created by Jim" \
+    --code S3Bucket=hvcafunctions,S3Key=lambda-java-example-1.0-SNAPSHOT.jar
+
