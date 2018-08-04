@@ -1,4 +1,1 @@
-# lambda
-# lambda
-# lambda
-# lambda
+This holds the initial lambda functions for my POC
