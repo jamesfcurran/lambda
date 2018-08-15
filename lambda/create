@@ -1,3 +1,4 @@
+set -x
 aws  --profile hvca_user s3 cp hvca/target/lambda-java-example-1.0-SNAPSHOT.jar s3://hvcafunctions
 
 aws --profile hvca_user lambda delete-function --region us-west-2 --function-name HVCA_phone_lookup
