@@ -1,6 +1,6 @@
 package HVCA;
 // pick up Amazon libraries
-import com.amazonaws.services.lambda.runtime.Context; 
+import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 // Apache logging stuff
@@ -13,7 +13,7 @@ public class HVCAHandlers {
 
     // Look up account by phone number
     public String phone_lookup(String phone, Context context) {
-
+      Customer cust = new Customer();
       // log to stdout and stderr
       System.out.println("log data from stdout sent by System.out.println");
       System.err.println("log data from stderr sent by System.err.println");
@@ -21,7 +21,7 @@ public class HVCAHandlers {
       // log via log4j error facility
 //      logger.error("log data from log4j err");
 
-      return "via_phone:112233|Jim Curran|4501 Corner Rd|Alexandria|OH|43001";
+      return (cust.name);
   }
 
   // Look up account by account number
@@ -34,4 +34,3 @@ public class HVCAHandlers {
     return acct+":112233|Jim Curran|4501 Corner Rd|Alexandria|OH|43001";
   }
 }
-
