@@ -54,13 +54,11 @@ public class HVCAHandlers {
       System.out.println("log data from stdout sent by System.out.println");
       System.err.println("log data from stderr sent by System.err.println");
 
-      // log via log4j error facility
-//      logger.error("log data from log4j err");
-
       // Create a JSON string from the Cutomer object...
       ObjectMapper mapper = new ObjectMapper();
       try {
         jsonInString = mapper.writeValueAsString(cust);
+        System.out.println(jsonInString);
       }
 
       catch (JsonGenerationException e) {
