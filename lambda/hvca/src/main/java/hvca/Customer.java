@@ -18,7 +18,7 @@ public class Customer
    name = "Jim Curran";
    account_num = 123456789;
    address = "4501 Corner Rd";
-   String town = "Alexandria";
+   town = "Alexandria";
    state = "Ohio";
    zip = "43001";
    circuit = "4HKAC";
@@ -36,74 +36,74 @@ public class Customer
   }
 
 
-  public int sge_account_num()  {
+  public int getAccount_num()  {
     return (account_num);
   }
-  public int set_account_num(int a)  {
+  public int setAccount_num(int a)  {
     account_num = a;
     return (account_num);
   }
 
-  public String get_address() {
+  public String getAddress() {
     return (address);
   }
-  public String set_address(String a) {
+  public String setAddress(String a) {
     address = a;
     return (address);
   }
 
-  public String get_town() {
+  public String getTown() {
     return (town);
   }
-  public String set_town(String t) {
+  public String setTown(String t) {
     town = t;
     return (town);
   }
 
-  public String get_state() {
+  public String getState() {
     return (state);
   }
-  public String set_state(String s) {
+  public String setState(String s) {
     state = s;
     return (state);
   }
 
-  public String get_zip() {
+  public String getZip() {
     return (zip);
   }
-  public String set_zip(String z) {
+  public String setZip(String z) {
     zip = z;
     return (zip);
   }
 
-  public String get_circuit() {
+  public String getCircuit() {
     return (circuit);
   }
-  public String set_circuit(String c) {
+  public String setCircuit(String c) {
     circuit = c;
     return (circuit);
   }
 
-  public String get_substation() {
+  public String getSubstation() {
     return (substation);
   }
-  public String set_substation(String s) {
+  public String setSubstation(String s) {
     substation = s;
     return (substation);
   }
 
-  public String get_feeder() {
+  public String getFeeder() {
     return (feeder);
   }
-  public String set_feeder(String f) {
+  public String setFeeder(String f) {
     feeder = f;
     return (feeder);
   }
 
-  public String get_critical_care() {
+  public String getCritical_care() {
     return (critical_care);
   }
-  public String set_critical_care(String c) {
+  public String setCritical_care(String c) {
     critical_care = c;
     return (critical_care);
   }
