@@ -13,6 +13,7 @@ aws --profile hvca_user lambda create-function \
     --handler HVCA.HVCAHandlers::phone_lookup \
     --region us-west-2 \
     --profile hvca_user \
+    --timeout 10 \
     --description "Created by Jim" \
     --code S3Bucket=hvcafunctions,S3Key=lambda-java-example-1.0-SNAPSHOT.jar
     
