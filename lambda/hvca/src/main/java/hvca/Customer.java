@@ -30,7 +30,8 @@ public class Customer
 
   public String json() {
 
-    String s = String.format("\"{\"name\":\"%s\",\"account_num\":%d,\"address\":\"%s\",\"town\":\"%s\",\"state\":\"%s\",\"zip\":\"%s\",\"circuit\":\"%s\",\"substation\":\"%s\",\"feeder\":\"%s\",\"critical_care\":\"%s\"}",
+    //String s = String.format("\"{\"name\":\"%s\",\"account_num\":%d,\"address\":\"%s\",\"town\":\"%s\",\"state\":\"%s\",\"zip\":\"%s\",\"circuit\":\"%s\",\"substation\":\"%s\",\"feeder\":\"%s\",\"critical_care\":\"%s\"}",
+    String s = String.format("\"{name:%s,account_num:%d,address:%s,town:%s,state:%s,zip:%s,circuit:%s,substation:%s,feeder:%s,critical_care:%s}\"",
     name, account_num, address, town, state, zip, circuit, substation, feeder, critical_care);
     return (s);
   }
